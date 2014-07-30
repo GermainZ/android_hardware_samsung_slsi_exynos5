@@ -15,6 +15,7 @@
 # limitations under the License.
 #
 
+ifneq ($(TARGET_SLSI_VARIANT), insignal)
 LOCAL_PATH := $(call my-dir)
 
 
@@ -35,3 +36,4 @@ LOCAL_SHARED_LIBRARIES += libMcClient
 include hardware/samsung_slsi/exynos5/mobicore/common/LogWrapper/Android.mk
 
 include $(BUILD_STATIC_LIBRARY)
+endif

@@ -3,6 +3,7 @@
 # Makefile pointing to all makefiles within the project.
 #
 # =============================================================================
+ifneq ($(TARGET_SLSI_VARIANT), insignal)
 MOBICORE_PROJECT_PATH := $(call my-dir)
 # Setup common variables
 LOG_WRAPPER := $(MOBICORE_PROJECT_PATH)/common/LogWrapper
@@ -29,3 +30,4 @@ MC_INCLUDE_DIR := $(COMP_PATH_MobiCore)/inc \
 MC_DEBUG := _DEBUG
 SYSTEM_LIB_DIR=/system/lib
 GDM_PROVLIB_SHARED_LIBS=libMcClient
+endif

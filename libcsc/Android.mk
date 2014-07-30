@@ -1,3 +1,4 @@
+ifneq ($(TARGET_SLSI_VARIANT), insignal)
 LOCAL_PATH := $(call my-dir)
 
 OMX_NAME := exynos
@@ -65,3 +66,4 @@ LOCAL_SHARED_LIBRARIES += libion_exynos
 LOCAL_CFLAGS += -DEXYNOS_OMX
 
 include $(BUILD_SHARED_LIBRARY)
+endif

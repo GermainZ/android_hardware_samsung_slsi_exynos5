@@ -12,6 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+ifneq ($(TARGET_SLSI_VARIANT), insignal)
 ifeq ($(filter-out exynos5,$(TARGET_BOARD_PLATFORM)),)
 
 LOCAL_PATH:= $(call my-dir)
@@ -34,4 +35,5 @@ LOCAL_MODULE_TAGS := eng
 LOCAL_MODULE := libexynosgscaler
 include $(BUILD_SHARED_LIBRARY)
 
+endif
 endif
